@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS
+restaurante_controle;
+USE restaurante_controle;
+
+CREATE TABLE IF NOT EXISTS
+usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS
+pratos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
+    -- liga o prato ao usuário que o cadastrou
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
