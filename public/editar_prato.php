@@ -3,10 +3,12 @@
 include "../infra/conexao.php";
 
 $id = $_GET["id"];
-$sql = "SELECT * FROM pratos WHERE id = $id";
-$resultado = mysqli_query($conexao, $sql );
-
-$prato =mysqli_fetch_assoc($resultado);
+$sql = "SELECT * FROM pratos WHERE id = ?";
+$stmt = $conexao->prepare($sql);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+$prato = $resultado->fetch_assoc();
 
 ?>
 
