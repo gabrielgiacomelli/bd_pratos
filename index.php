@@ -389,9 +389,7 @@ $pratos = mysqli_query($conexao, "
 
                             <th class="text-center pe-4">Ações</th>
                         </tr>
-
                     </thead>
-
 
                     <tbody>
 
@@ -405,20 +403,13 @@ $pratos = mysqli_query($conexao, "
                                     #<?php echo $prato['id']; ?>
                                 </td>
 
-
                                 <td class="fw-semibold">
-
                                     <?php echo htmlspecialchars($prato['nome']); ?>
-
                                 </td>
-
 
                                 <td class="descricao">
-
                                     <?php echo htmlspecialchars($prato['descricao']); ?>
-
                                 </td>
-
 
                                 <td class="preco">
 
@@ -434,47 +425,29 @@ $pratos = mysqli_query($conexao, "
 
                                 </td>
 
-
                                 <td>
-
                                     <span class="badge-categoria">
                                         <?php echo htmlspecialchars($prato['categoria']); ?>
                                     </span>
-
                                 </td>
-
 
                                 <td>
-
                                     <?php echo htmlspecialchars($prato['cadastrado_por']); ?>
-
                                 </td>
 
-
                                 <td class="text-center pe-4 acoes">
-
                                     <div class="d-inline-flex gap-2">
-
-                                        <a
-                                            href="public/editar_prato.php?id=<?php echo $prato['id']; ?>"
-                                            class="btn btn-sm btn-outline-success"
-                                        >
+                                        <a href="public/editar_prato.php?id=<?php echo $prato['id']; ?>" class="btn btn-sm btn-outline-success">
                                             <i class="bi bi-pencil-square"></i>
                                             Editar
                                         </a>
 
-
-                                        <a
-                                            href="public/excluir_prato.php?id=<?php echo $prato['id']; ?>"
-                                            class="btn btn-sm btn-outline-danger"
-                                            onclick="return confirm('Tem certeza que deseja excluir este prato?');"
-                                        >
+                                        <a href="public/excluir_prato.php?id=<?php echo $prato['id']; ?>" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Tem certeza que deseja excluir este prato?');">
                                             <i class="bi bi-trash3"></i>
                                             Excluir
                                         </a>
-
                                     </div>
-
                                 </td>
 
                             </tr>
@@ -484,9 +457,7 @@ $pratos = mysqli_query($conexao, "
                     </tbody>
 
                 </table>
-
             </div>
-
         </section>
 
     </main>
