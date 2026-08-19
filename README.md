@@ -2,7 +2,7 @@
 
 Nesse projeto é possível ter o controle sobre o estabelecimento do restaurante!
 
-# Funcionalidades: 
+## Funcionalidades: 
 
 | ID | Tipo | Descrição |
 | :---: | :---: | :--- |
@@ -15,7 +15,7 @@ Nesse projeto é possível ter o controle sobre o estabelecimento do restaurante
 | **RNF1** | Requisito Não Funcional | **Validação dos Campos:** O sistema não deve permitir o cadastro de usuários ou pratos com campos obrigatórios vazios. |
 | **RNF2** | Requisito Não Funcional | **Segurança dos Dados:** As operações que recebem informações fornecidas pelo usuário deverão utilizar Prepared Statements. |
 
-# Produzido por:
+## Produzido por:
 
 - Gabriel da Costa Giacomelli
 - Lara Emilia Guzman Baratto
