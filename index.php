@@ -418,8 +418,6 @@ $pratos = mysqli_query($conexao, "
                                     echo number_format(
                                         $prato['preco'],
                                         2,
-                                        ',',
-                                        '.'
                                     );
                                     ?>
 
