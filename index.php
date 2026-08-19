@@ -22,18 +22,8 @@ $pratos = mysqli_query($conexao, "
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Controle de Restaurante</title>
-
-    <!-- Bootstrap 5 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <!-- Bootstrap Icons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
         body {
@@ -156,7 +146,6 @@ $pratos = mysqli_query($conexao, "
 
 <body>
 
-    <!-- ================= HEADER ================= -->
     <header class="navbar-custom text-white shadow-sm mb-4">
         <div class="container py-4">
 
@@ -180,15 +169,10 @@ $pratos = mysqli_query($conexao, "
         </div>
     </header>
 
-
     <main class="container mb-5">
 
-        <!-- ================= FORMULÁRIOS ================= -->
         <div class="row g-4 mb-5">
-
-            <!-- CADASTRO DE USUÁRIO -->
             <div class="col-lg-6">
-
                 <section class="card shadow-sm h-100">
 
                     <div class="card-header bg-white py-3">
@@ -196,210 +180,90 @@ $pratos = mysqli_query($conexao, "
                             <span class="icon-title icon-user">
                                 <i class="bi bi-person-plus"></i>
                             </span>
-
                             Cadastrar Novo Usuário
                         </h2>
                     </div>
-
                     <div class="card-body p-4">
 
                         <form action="public/cadastrar_usuario.php" method="POST">
-
-                            <!-- Nome -->
                             <div class="mb-3">
-
-                                <label
-                                    for="nome_usuario"
-                                    class="form-label fw-semibold"
-                                >
+                                <label for="nome_usuario" class="form-label fw-semibold">
                                     Nome
                                 </label>
-
-                                <input
-                                    type="text"
-                                    name="nome"
-                                    id="nome_usuario"
-                                    class="form-control"
-                                    placeholder="Ex: João Silva"
-                                    required
-                                >
-
+                                <input type="text" name="nome" id="nome_usuario" class="form-control" placeholder="Ex: João Silva" required>
                             </div>
 
-
-                            <!-- E-mail -->
                             <div class="mb-4">
-
-                                <label
-                                    for="email_usuario"
-                                    class="form-label fw-semibold"
-                                >
+                                <label for="email_usuario" class="form-label fw-semibold">
                                     E-mail
                                 </label>
-
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email_usuario"
-                                    class="form-control"
-                                    placeholder="Ex: joao@email.com"
-                                    required
-                                >
+                                <input type="email" name="email" id="email_usuario" class="form-control" placeholder="Ex: joao@email.com" required>
 
                             </div>
 
-
-                            <button
-                                type="submit"
-                                class="btn btn-primary w-100 py-2 fw-semibold"
-                            >
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
                                 <i class="bi bi-person-plus-fill me-1"></i>
                                 Cadastrar Usuário
                             </button>
-
                         </form>
 
                     </div>
 
                 </section>
-
             </div>
 
-
-            <!-- CADASTRO DE PRATO -->
             <div class="col-lg-6">
-
                 <section class="card shadow-sm h-100">
 
                     <div class="card-header bg-white py-3">
-
                         <h2 class="h5 mb-0 section-title">
 
                             <span class="icon-title icon-prato">
                                 <i class="bi bi-egg-fried"></i>
                             </span>
-
                             Cadastrar Novo Prato
-
                         </h2>
 
                     </div>
 
-
                     <div class="card-body p-4">
 
                         <form action="public/cadastrar_prato.php" method="POST">
-
-                            <!-- Nome -->
                             <div class="mb-3">
-
-                                <label
-                                    for="nome_prato"
-                                    class="form-label fw-semibold"
-                                >
+                                <label for="nome_prato" class="form-label fw-semibold">
                                     Nome do Prato
                                 </label>
-
-                                <input
-                                    type="text"
-                                    name="nome"
-                                    id="nome_prato"
-                                    class="form-control"
-                                    placeholder="Ex: Fettuccine Alfredo"
-                                    required
-                                >
-
+                                <input type="text" name="nome" id="nome_prato" class="form-control" placeholder="Ex: Fettuccine Alfredo" required>
                             </div>
 
-
-                            <!-- Descrição -->
                             <div class="mb-3">
-
-                                <label
-                                    for="descricao_prato"
-                                    class="form-label fw-semibold"
-                                >
+                                <label for="descricao_prato" class="form-label fw-semibold">
                                     Descrição
                                 </label>
-
-                                <textarea
-                                    name="descricao"
-                                    id="descricao_prato"
-                                    class="form-control"
-                                    rows="2"
-                                    placeholder="Ingredientes e detalhes do prato..."
-                                    required
-                                ></textarea>
-
+                                <textarea name="descricao" id="descricao_prato" class="form-control" rows="2" placeholder="Ingredientes e detalhes do prato..." required ></textarea>
                             </div>
 
-
-                            <!-- Preço e categoria -->
                             <div class="row g-3 mb-3">
-
                                 <div class="col-md-6">
-
-                                    <label
-                                        for="preco_prato"
-                                        class="form-label fw-semibold"
-                                    >
+                                    <label for="preco_prato" class="form-label fw-semibold">
                                         Preço (R$)
                                     </label>
-
-                                    <input
-                                        type="number"
-                                        name="preco"
-                                        id="preco_prato"
-                                        class="form-control"
-                                        step="0.01"
-                                        min="0"
-                                        placeholder="0,00"
-                                        required
-                                    >
-
+                                    <input type="number" name="preco" id="preco_prato" class="form-control" step="0.01" min="0" placeholder="0,00" required>
                                 </div>
-
 
                                 <div class="col-md-6">
-
-                                    <label
-                                        for="categoria_prato"
-                                        class="form-label fw-semibold"
-                                    >
+                                    <label for="categoria_prato" class="form-label fw-semibold">
                                         Categoria
                                     </label>
-
-                                    <input
-                                        type="text"
-                                        name="categoria"
-                                        id="categoria_prato"
-                                        class="form-control"
-                                        placeholder="Ex: Massas"
-                                        required
-                                    >
-
+                                    <input type="text" name="categoria" id="categoria_prato" class="form-control" placeholder="Ex: Massas" required>
                                 </div>
-
                             </div>
 
-
-                            <!-- Usuário -->
                             <div class="mb-4">
-
-                                <label
-                                    for="usuario_id"
-                                    class="form-label fw-semibold"
-                                >
+                                <label for="usuario_id" class="form-label fw-semibold">
                                     Cadastrado por
                                 </label>
-
-                                <select
-                                    name="usuario_id"
-                                    id="usuario_id"
-                                    class="form-select"
-                                    required
-                                >
-
+                                <select name="usuario_id" id="usuario_id" class="form-select" required>
                                     <option value="">
                                         Selecione um usuário...
                                     </option>
@@ -417,75 +281,43 @@ $pratos = mysqli_query($conexao, "
                                     <?php } ?>
 
                                 </select>
-
                             </div>
 
-
-                            <button
-                                type="submit"
-                                class="btn btn-dark w-100 py-2 fw-semibold"
-                            >
+                            <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">
                                 <i class="bi bi-plus-circle-fill me-1"></i>
                                 Cadastrar Prato
                             </button>
-
                         </form>
 
                     </div>
 
                 </section>
-
             </div>
-
         </div>
 
-
-        <!-- ================= TABELA DE USUÁRIOS ================= -->
-
         <section class="card shadow-sm mb-4">
-
             <div class="card-header bg-white py-3">
-
                 <div class="d-flex justify-content-between align-items-center">
-
                     <h2 class="h5 mb-0 section-title">
                         <i class="bi bi-people-fill text-primary me-2"></i>
                         Usuários Cadastrados
                     </h2>
-
                 </div>
-
             </div>
 
-
             <div class="table-responsive">
-
                 <table class="table table-hover align-middle">
-
                     <thead class="table-light">
-
                         <tr>
+                            <th class="ps-4">ID</th>
 
-                            <th class="ps-4">
-                                ID
-                            </th>
+                            <th>Nome</th>
 
-                            <th>
-                                Nome
-                            </th>
+                            <th>E-mail</th>
 
-                            <th>
-                                E-mail
-                            </th>
-
-                            <th class="text-center pe-4">
-                                Ações
-                            </th>
-
+                            <th class="text-center pe-4">Ações</th>
                         </tr>
-
                     </thead>
-
 
                     <tbody>
 
@@ -496,115 +328,66 @@ $pratos = mysqli_query($conexao, "
                         ?>
 
                             <tr>
-
                                 <td class="ps-4 text-muted">
                                     #<?php echo $user['id']; ?>
                                 </td>
 
-
                                 <td class="fw-semibold">
-
                                     <?php echo htmlspecialchars($user['nome']); ?>
-
                                 </td>
-
 
                                 <td>
-
                                     <?php echo htmlspecialchars($user['email']); ?>
-
                                 </td>
 
-
                                 <td class="text-center pe-4 acoes">
-
                                     <div class="d-inline-flex gap-2">
-
-                                        <a
-                                            href="public/editar_usuario.php?id=<?php echo $user['id']; ?>"
-                                            class="btn btn-sm btn-outline-success"
-                                        >
+                                        <a href="public/editar_usuario.php?id=<?php echo $user['id']; ?>"class="btn btn-sm btn-outline-success">
                                             <i class="bi bi-pencil-square"></i>
                                             Editar
                                         </a>
 
-
-                                        <a
-                                            href="public/excluir_usuario.php?id=<?php echo $user['id']; ?>"
-                                            class="btn btn-sm btn-outline-danger"
-                                            onclick="return confirm('Tem certeza que deseja excluir este usuário?');"
-                                        >
+                                        <a href="public/excluir_usuario.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-outline-danger"
+                                            onclick="return confirm('Tem certeza que deseja excluir este usuário?');" >
                                             <i class="bi bi-trash3"></i>
                                             Excluir
                                         </a>
-
                                     </div>
-
                                 </td>
-
                             </tr>
 
                         <?php } ?>
 
                     </tbody>
-
                 </table>
-
             </div>
-
         </section>
 
-
-        <!-- ================= TABELA DE PRATOS ================= -->
-
         <section class="card shadow-sm">
-
             <div class="card-header bg-white py-3">
-
                 <h2 class="h5 mb-0 section-title">
                     <i class="bi bi-journal-text text-success me-2"></i>
                     Pratos Cadastrados
                 </h2>
-
             </div>
 
-
             <div class="table-responsive">
-
                 <table class="table table-hover align-middle">
-
                     <thead class="table-light">
-
                         <tr>
+                            <th class="ps-4">ID</th>
 
-                            <th class="ps-4">
-                                ID
-                            </th>
+                            <th>Nome do Prato</th>
 
-                            <th>
-                                Nome do Prato
-                            </th>
+                            <th>Descrição</th>
 
-                            <th>
-                                Descrição
-                            </th>
+                            <th>Preço</th>
 
-                            <th>
-                                Preço
-                            </th>
+                            <th>Categoria</th>
 
-                            <th>
-                                Categoria
-                            </th>
+                            <th>Cadastrado Por</th>
 
-                            <th>
-                                Cadastrado Por
-                            </th>
-
-                            <th class="text-center pe-4">
-                                Ações
-                            </th>
-
+                            <th class="text-center pe-4">Ações</th>
                         </tr>
 
                     </thead>
@@ -708,26 +491,14 @@ $pratos = mysqli_query($conexao, "
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer class="text-center py-4">
-
         <div class="container">
-
             <i class="bi bi-shop me-1"></i>
-
             Sistema de Controle de Restaurante
-
         </div>
-
     </footer>
 
-
-    <!-- Bootstrap JS -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
