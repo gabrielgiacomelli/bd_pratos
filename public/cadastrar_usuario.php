@@ -1,26 +1,17 @@
 <?php
-// Como este arquivo está dentro da pasta 'public', precisamos voltar um nível (../) para achar a conexão
+
 include "../infra/conexao.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Captura os dados do formulário de usuário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
+$nome = $_POST["nome"];
+$email = $_POST["email"];
 
-    // Evita SQL Injection limpando as strings
-    $nome = mysqli_real_escape_string($conexao, $nome);
-    $email = mysqli_real_escape_string($conexao, $email);
+$sql = "INSERT INTO usuarios (nome, email) VALUES (?, ?)";
 
-    // Prepara o comando SQL de inserção
-    $sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
+$stmt = mysqli_prepare($conexao, $sql);
 
-    // Executa no banco de dados
-    if (mysqli_query($conexao, $sql)) {
-        // Se der certo, redireciona de volta para a index.php
-        header("Location: ../index.php");
-        exit();
-    } else {
-        echo "Erro ao cadastrar usuário: " . mysqli_error($conexao);
-    }
-}
+mysqli_stmt_bind_param($stmt, "ss", $nome, $email);
+
+mysqli_stmt_execute($stmt);
+
+header("Location: ../index.php");
 ?>
