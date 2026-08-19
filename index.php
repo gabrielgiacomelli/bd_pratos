@@ -146,6 +146,26 @@ $pratos = mysqli_query($conexao, "
 
 <body>
 
+    <?php if (isset($_GET['sucesso'])): ?>
+        <div class="container-fluid position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1055; max-width: 400px; margin-top: 10px;">
+            <div class="alert alert-success alert-dismissible fade show shadow border-0 d-flex align-items-center gap-2" role="alert">
+                <i class="bi bi-check-circle-fill fs-5"></i>
+                <div>
+                    <?php
+                    if ($_GET['sucesso'] === 'usuario') {
+                        echo "Usuário cadastrado com sucesso!";
+                    } elseif ($_GET['sucesso'] === 'prato') {
+                        echo "Prato cadastrado com sucesso!";
+                    } else {
+                        echo "Cadastro realizado com sucesso!";
+                    }
+            ?>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+<?php endif; ?>
+
     <header class="navbar-custom text-white shadow-sm mb-4">
         <div class="container py-4">
 

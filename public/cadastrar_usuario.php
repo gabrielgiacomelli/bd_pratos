@@ -13,5 +13,5 @@ mysqli_stmt_bind_param($stmt, "ss", $nome, $email);
 
 mysqli_stmt_execute($stmt);
 
-header("Location: ../index.php");
+header("Location: ../index.php?sucesso=usuario");
 ?>

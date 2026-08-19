@@ -15,6 +15,6 @@ mysqli_stmt_bind_param($stmt,"ssdsi", $nome, $descricao, $preco, $categoria, $us
 
 mysqli_stmt_execute($stmt);
 
-header("Location: ../index.php");
+header("Location: ../index.php?sucesso=prato");
 exit;
 ?>
