@@ -9,7 +9,7 @@ $categoria = $_POST["categoria"];
 
 $sql = "UPDATE pratos SET nome=?,descricao=?,preco=?, categoria=? WHERE id = ?";
 $stmt = $conexao->prepare($sql);
-$stmt->bind_param("sssdi", $nome, $descricao, $preco, $categoria, $id);
+$stmt->bind_param("ssdsd", $nome, $descricao, $preco, $categoria, $id);
 $stmt->execute();
 
 header("Location: ../index.php");
