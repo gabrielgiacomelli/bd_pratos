@@ -168,11 +168,12 @@ $usuario = mysqli_fetch_assoc($resultado);
                         <input type="email" id="email" name="email" value="<?php echo $usuario["email"]?>" required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary fw-semibold">
                         <i class="bi bi-check-circle me-2"></i> Atualizar Dados
                     </button>
                     
-                    <a href="../index.php" class="btn btn-secondary" style="display: block; text-align: center; text-decoration: none; margin-top: 10px;">Voltar para o Início</a>
+                    <a href="../index.php" class="btn btn-secondary" style="display: block; text-align: center; text-decoration: none; margin-top: 10px;">
+                        Voltar para o Início</a>
                 </form>
             </div>
 
